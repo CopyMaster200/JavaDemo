@@ -15,8 +15,8 @@ public class SelectionSort {
         System.out.println(Arrays.toString(arr));
     }
 
-    private static int[] selection(int[] arr, int i, int j, int max) {
-        if (i == arr.length - 1) return arr;
+    private static void selection(int[] arr, int i, int j, int max) {
+        if (i == arr.length - 1) return;
 
         if (j < arr.length - i) {
             if (arr[max] < arr[j]) {
@@ -27,7 +27,6 @@ public class SelectionSort {
             swap(arr, max, arr.length - 1 - i);
             selection(arr, i + 1, 0, 0);
         }
-        return arr;
     }
 
     /**
